@@ -1,0 +1,275 @@
+.live-panel {
+  margin: 34px 0;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    rgba(23, 34, 53, 0.96),
+    rgba(14, 22, 37, 0.98)
+  );
+  box-shadow: 0 20px 65px rgba(0, 0, 0, 0.24);
+}
+
+.live-panel-heading,
+.live-room-info,
+.live-call-controls,
+.live-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.live-panel-heading h2 {
+  margin: 5px 0 8px;
+  color: #f5f5fa;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(22px, 3vw, 29px);
+}
+
+.live-panel-heading p:not(.live-eyebrow) {
+  max-width: 650px;
+  color: #929db2;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.live-eyebrow,
+.live-muted-label {
+  color: #9d91ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.live-indicator {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 30px;
+  color: #aab4c8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.live-indicator.active {
+  border-color: rgba(67, 221, 167, 0.4);
+  background: rgba(67, 221, 167, 0.1);
+  color: #43dda7;
+}
+
+.live-setup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.live-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #a9b3c5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.live-field select,
+.live-field input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 13px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 11px;
+  outline: none;
+  background: #0d1625;
+  color: #f5f5fa;
+}
+
+.live-field select:focus,
+.live-field input:focus {
+  border-color: #8b7aff;
+}
+
+.live-actions {
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.live-primary-button,
+.live-secondary-button,
+.live-end-button,
+.live-copy-button {
+  min-height: 45px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.live-primary-button {
+  background: linear-gradient(100deg, #907cff, #42d6e6);
+  color: #07101c;
+}
+
+.live-secondary-button,
+.live-copy-button {
+  border: 1px solid rgba(139, 122, 255, 0.4);
+  background: rgba(139, 122, 255, 0.11);
+  color: #d1caff;
+}
+
+.live-end-button {
+  border: 1px solid rgba(255, 120, 120, 0.35);
+  background: rgba(255, 120, 120, 0.1);
+  color: #ffaaaa;
+}
+
+.live-primary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.live-divider {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #738099;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.live-divider::before,
+.live-divider::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.live-room {
+  margin-top: 24px;
+}
+
+.live-room-info {
+  padding: 17px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  background: rgba(6, 12, 22, 0.35);
+}
+
+.live-room-info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.live-room-code {
+  color: #54dbe8;
+  font-family: 'Outfit', sans-serif;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.live-muted-label {
+  color: #8995aa;
+  letter-spacing: 1px;
+}
+
+.live-status {
+  margin: 17px 0;
+  color: #aeb9cd;
+  font-size: 13px;
+}
+
+.live-call-controls {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.live-message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 22px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(5, 10, 19, 0.38);
+}
+
+.live-message {
+  max-width: 90%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: #e9edf8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.live-message.outgoing {
+  align-self: flex-end;
+  border: 1px solid rgba(139, 122, 255, 0.18);
+  background: rgba(139, 122, 255, 0.12);
+}
+
+.live-message.incoming {
+  align-self: flex-start;
+  border: 1px solid rgba(64, 217, 232, 0.18);
+  background: rgba(64, 217, 232, 0.1);
+}
+
+.live-empty {
+  color: #77849b;
+  font-size: 13px;
+  text-align: center;
+}
+
+.live-error {
+  margin-top: 16px;
+  color: #ff9b9b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 650px) {
+  .live-panel {
+    padding: 20px;
+  }
+
+  .live-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .live-setup {
+    grid-template-columns: 1fr;
+  }
+
+  .live-actions {
+    justify-content: stretch;
+  }
+
+  .live-actions button,
+  .live-setup > .live-secondary-button {
+    width: 100%;
+  }
+
+  .live-room-info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .live-message {
+    max-width: 100%;
+  }
+}
